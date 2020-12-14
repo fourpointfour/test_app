@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -59,52 +58,70 @@ class _HomeState extends State<Home> {
         color: Colors.lightBlueAccent,
         child: Scaffold(
           body: SafeArea(
-            child: SingleChildScrollView(
-              child: Column(
+            child: Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
-                  // for horizontal scrolling
-                  ListView.builder(
-                    // scrollDirection: Axis.horizontal,
-                    shrinkWrap: true,
-                    itemCount: listOfChars.length,
-                    itemBuilder: (BuildContext context, int index){
-                      return Container(
-                        margin: EdgeInsets.all(7.0),
-                        color: Colors.orangeAccent,
-                        child: Card(
-                          color: Colors.orangeAccent,
-                          child: Text(
-                            listOfChars[index],
-                            style: TextStyle(
-                              fontSize: 35.0,
+                  Container(
+                    height: 100.0,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      physics: BouncingScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: listOfChars.length,
+                      itemBuilder: (BuildContext context, int index){
+                        return Container(
+                          width: 100.0,
+                          margin: EdgeInsets.all(7.0),
+                          decoration: BoxDecoration(
+                            color: Colors.orangeAccent,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Card(
+                            elevation: 0.0,
+                            color: Colors.orangeAccent,
+                            child: Center(
+                              child: Text(
+                                listOfChars[index],
+                                style: TextStyle(
+                                  fontSize: 35.0,
+                                ),
+                              ),
                             ),
                           ),
-                        ),
-                      );
-                    },
+                        );
+                      },
+                    ),
                   ),
-                  // for vertical scrolling
-                  ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: listOfChars.length,
-                    itemBuilder: (BuildContext context, int index){
-                      return Container(
-                        margin: EdgeInsets.all(7.0),
-                        color: Colors.orangeAccent,
-                        child: Card(
-                          child: Text(
-                            listOfChars[index],
-                            style: TextStyle(
-                              fontSize: 35.0,
+                  SizedBox(height: 10),
+                  Expanded(
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: listOfChars.length,
+                      itemBuilder: (BuildContext context, int index){
+                        return Container(
+                          margin: EdgeInsets.all(7.0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: Colors.orangeAccent,
+                          ),
+                          child: Card(
+                            elevation: 0.0,
+                            color: Colors.orangeAccent,
+                            child: Center(
+                              child: Text(
+                                listOfChars[index],
+                                style: TextStyle(
+                                  fontSize: 35.0,
+                                ),
+                              ),
                             ),
                           ),
-                        ),
-                      );
-                    },
+                        );
+                      },
+                    ),
                   ),
                 ],
               ),
-            ),
           ),
         ),
       );
