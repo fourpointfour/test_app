@@ -1,16 +1,12 @@
-# test_app
+# Test App
 
 A new Flutter application.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project contains the code for the features that I need to add to my project, so what I do is I try those features seperately on a test app and then I write them to my main project.
 
-A few resources to get you started if this is your first Flutter project:
+## Cloning and running the code
+The branches are named according to the feature I have tried in that branch so whatever you want to look at, just checkout to that branch and take a look at THE code.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Suggestions are always welcome for improvements to this repository.
