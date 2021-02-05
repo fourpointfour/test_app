@@ -1,6 +1,7 @@
 # Test App
 
-A new Flutter application.
+The task was to include a widget right where the text line ends after rendering, so the solution here in this branch is by using a ```RichText``` and then using the ```TextSpan``` and ```WidgetSpan``` inside the children property of the parent widget. The result achieved was as follows:</br>
+<p align="center"><img src="result.png" height="600"></p>
 
 ## Getting Started
 
