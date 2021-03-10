@@ -22,13 +22,18 @@ class _HomeState extends State<Home> {
         title: Text("Custom Painter"),
       ),
       body: SafeArea(
-        child: Container(
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
-          padding: EdgeInsets.all(20),
-          child: CustomPaint(
-            painter: ShapePainter(),
-          ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              height: 40,
+            ),
+            Expanded(
+              child: CustomPaint(
+                painter: ShapePainter(),
+              ),
+            ),
+          ],
         ),
       ),
     );
